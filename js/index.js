@@ -41,6 +41,8 @@ const jsonData = `
 //Recorrer el JSON e insertar en el listado del html los nombres de los miembros
 function recorrerMiembros() {
     //escribe la lógica
-
+    const listaMiembros = JSON.parse(jsonData);
+    const lista = document.querySelector("#miembros");
+    listaMiembros.members.forEach(miembro => lista.innerHTML += `<li>${miembro.name}</li>`);;
 };
 recorrerMiembros();
